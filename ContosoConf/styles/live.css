@@ -1,0 +1,17 @@
+.ask {
+    border-top:2px solid #2700ff;
+    margin-bottom: 10rem;
+}
+.ask label{
+    font-size:2rem;
+}
+.ask input{
+    height:2rem;
+    border-radius:1%;
+}
+
+.ask button{
+    height:2rem;
+    width:5rem;
+    color:#2700ff;
+}

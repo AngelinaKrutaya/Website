@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/site.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/feedback.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="nav">
+    <div class="container">
+        <a href="home.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="schedule.html"> Schedule </a>
+        <a href="location.html"> Location </a>
+        <a href="live.html"> Live </a>
+        <a href="#" class="active"> Feedback </a>
+        <a href="register.html"> Register </a>
+    </div>
+</div>
+
+<div class="header">
+    <div class="container" style="width:960px;">
+        <div style="width:560px;">
+            <h1>ContosoConf</h1>
+            <h4>A two-track conference on the latest HTML5 developments</h4>
+        </div>
+    </div>
+</div>
+
+<div class="comment">
+    <div class="container">
+        <h3>Enjoyed the conference? Leave your feedback!</h3>
+        <div class="stars" style="width:960px; height:100px">
+            <div style="width:600px;float:left">
+                <p>How would you rate the speaker's knowledge of the topic?</p>
+            </div>
+            <div style="width:300px; height:50px;float:left; margin:30px;">
+                <input type="range" min="1" max="5" style="display:none;"/>
+                <div class="star" ></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+        </div>
+        <div class="stars" style="width:960px;height:100px">
+            <div style="width:600px;float:left">
+            <p>How well could you hear the speaker?</p>
+        </div>
+            <div style="width:300px; height:50px;float:left; margin:30px;">
+                <input type="range" min="1" max="5" style="display:none;"/>
+                <div class="star" ></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+        </div>
+        <div class="stars" style="width:960px;height:100px">
+            <div style="width:600px;float:left">
+                <p>How useful did you find the information in this talk?</p>
+            </div>
+            <div style="width:300px; height:50px;float:left; margin:30px;">
+                <input type="range" min="1" max="5" style="display:none;"/>
+                <div class="star" ></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+        </div>
+        <div class="stars" style="width:960px;height:100px" style="display:none;">
+            <div style="width:600px;float:left" >
+                <p>How would you rate the overall session?</p>
+            </div>
+            <div style="width:300px; height:50px;float:left; margin:30px;">
+                <input type="range" min="1" max="5" style="display:none;"/>
+                <div class="star" ></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+        </div>
+        <h6>Any additional comments?</h6>
+        <textarea rows="10" cols="45" name="text"></textarea>
+        </br>
+        <button type="submit">Send Feedback</button>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div style="float:left;width:800px;padding-top:10px;">
+            Hosted by Contoso
+            <address style="padding-top:10px;">Conference Center</address>
+            <address> 1234 Main Street</address>
+            <address> Seattle</address>
+            <address> WA 98999</address>
+        </div>
+        <div style="float:left;padding-top:100px;">
+            © 2012 Contoso
+        </div>
+    </div>
+</div>
+</body>
+</html>

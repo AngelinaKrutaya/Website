@@ -1,0 +1,53 @@
+.comment {
+    border-top:2px solid #2700ff;
+    margin-bottom: 10rem;
+}
+
+.comment p{
+    font-size:1.5rem;
+}
+
+.star {
+    background-image: url(./images/stars.png);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin: .1rem;
+    -ms-box: 0;
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    display: inline-block;
+    -ms-transition: -ms-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+}
+.star.hover,
+.star:hover{
+    background-position: 0 -15px;
+
+    -ms-transform: scale(1.3, 1.3);
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+
+    -ms-transition: -ms-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+}
+
+.star.selected {
+    background-position: 0 -30px;
+
+    -ms-transform: scale(1.3, 1.3);
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+}
+
+
+
+.comment button{
+    width: 10rem;
+    height: 3rem;
+    color:#2700ff;
+    margin-left:5rem;
+    font-size:1rem;
+}
