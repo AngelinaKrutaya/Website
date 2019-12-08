@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="nav">
+<nav>
     <div class="container">
-        <a href="home.html" > Home </a>
+        <a href="home.html"> Home </a>
         <a href="about.html"> About </a>
         <a href="schedule.html"> Schedule </a>
         <a href="location.html"> Location </a>
@@ -19,52 +19,52 @@
         <a href="#" class="active"> Register </a>
     </div>
 
-</div>
+</nav>
 
-<div class="header">
+<header>
     <div class="container" style="width:960px;">
         <div style="width:560px;">
             <h1>ContosoConf</h1>
             <h4>A two-track conference on the latest HTML5 developments</h4>
         </div>
     </div>
-</div>
+</header>
 
-<div class="form">
+<article>
     <div class="container">
-        <h3>Register for the conference</h3>
-        <form  method="post" target="_blank">
-            <h6>First name: </h6>
-            <input type="text" name="first_name" value="" size="50" />
-            <h6>Last name:</h6>
-            <input type="text" name="last_name" value=""size="50" />
-            <h6>Email address:</h6>
-            <input type="email" name="login" value="" size="50"/>
-            <h6>Choose a password:</h6>
-            <input type="password" name="login" value="" size="50"/>
-            <h6>Confirm your password:</h6>
-            <input type="password" name="login" value="" size="50"/>
-            <h6>Website/blog:</h6>
-            <input type="url" name="login" value=""  placeholder="http://" size="50"/>
+        <form method="post" target="_blank">
+            <legend>Register for the conference</legend>
+            <label>First name: </label>
+            <input type="text" name="first_name" value="" size="50" required="required"/>
+            <label>Last name:</label>
+            <input type="text" name="last_name" value="" size="50" required="required"/>
+            <label>Email address:</label>
+            <input type="email" name="mail" value="" size="50" required="required"/>
+            <label>Choose a password:</label>
+            <input type="password" name="pass" value="" size="50" required="required"/>
+            <label>Confirm your password:</label>
+            <input type="password" name="pass" value="" size="50" required="required"/>
+            <label>Website/blog:</label>
+            <input type="url" name="url" value="" placeholder="http://" size="50"/>
             </br>
             <button type="submit">Register</button>
         </form>
     </div>
-</div>
+</article>
 
-<div class="footer">
+<footer>
     <div class="container">
         <div style="float:left;width:800px;padding-top:10px;">
             Hosted by Contoso
             <address style="padding-top:10px;">Conference Center</address>
-            <address>   1234 Main Street</address>
-            <address >  Seattle </address>
-            <address>   WA 98999</address>
+            <address> 1234 Main Street</address>
+            <address> Seattle</address>
+            <address> WA 98999</address>
         </div>
         <div style="float:left;padding-top:100px;">
             © 2012 Contoso
         </div>
     </div>
-</div>
+</footer>
 </body>
 </html>

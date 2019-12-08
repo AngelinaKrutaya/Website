@@ -1,0 +1,104 @@
+div a:hover {
+    text-decoration: underline solid #2700ff;
+}
+
+div a:after {
+    text-decoration: underline;
+}
+.registr {
+    border: 1px solid #2700ff;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 100px;
+    border-radius: 5px;
+    background: -moz-linear-gradient(#e6e7e8, #e6e7e8, #e6e7e8);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7e8), to(#e6e7e8), color-stop(0.5, #e6e7e8));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+}
+
+.registr h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    margin: 0px;
+    font-size: 2rem;
+}
+
+div .registr a {
+    color: black;
+    height: 100% !important;
+    text-align: center;
+}
+.registr a:hover {
+    text-decoration: none;
+}
+.registr:hover {
+    text-decoration: none;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+.registr:hover:before {
+    border-color: #0766d8;
+    background: #fff linear-gradient(#3fadff, #0766d8 60%, #3279dd);
+}
+
+.registr:focus,
+.registr:active {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+
+section .container div{
+    box-shadow: none;
+}
+section video {
+    width: 100%;
+    height: 600px;
+}
+section button{
+    height: 3rem;!important;
+    width: 3rem;!important;
+    align-content: center;!important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);!important;
+    border: 0.1rem solid gray;!important;
+    margin:5px;!important;
+    font-size:1.5rem;
+}
+section #play {
+    background-color: forestgreen;
+}
+section #pause {
+    background-color: grey;
+}
+
+section #down{
+    color:white;
+    background-color: black;
+}
+section #upper{
+    color:white;
+    background-color: black;
+}
+section #1 h6{
+    margin:5px;
+}
+section h6{
+    width:160px;
+    margin:5px;
+}
+section img {
+    border: 0.1rem solid black;
+    margin: 30px;
+    display:inline-block;
+}
+
+section p{
+    margin:0px;
+    height:2rem;
+
+}

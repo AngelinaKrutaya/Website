@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="styles/site.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/site.css" rel="stylesheet"/>
+    <link href="styles/home.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="nav">
+<nav>
     <div class="container">
         <a href="#" class="active"> Home </a>
         <a href="about.html"> About </a>
@@ -18,10 +19,9 @@
         <a href="register.html"> Register </a>
     </div>
 
-</div>
-
-<div class="header">
-    <div class="container" style="width:960px;">
+</nav>
+<header>
+    <div class="container">
         <div style="width:560px;float:left;">
             <h1>ContosoConf</h1>
             <h4>A two-track conference on the latest HTML5 developments</h4>
@@ -31,9 +31,10 @@
             <a href="register.html" target="_self"><h3>Click for FREE Register</h3></a>
         </div>
     </div>
-</div>
+</header>
 
-<div class="header">
+
+<article>
     <div class="container">
         <p>The web keeps evolving. There's a wealth of new technologies to keep up with!
             ContosoConf is an in-depth exploration of HTML5, CSS3 and JavaScript, in the
@@ -41,78 +42,167 @@
         </p>
 
         <h5>Don't miss the best speakers in the business, talking about the future of the web.</h5>
-
     </div>
-</div>
-<div class="speakers">
+</article>
+<section>
     <div class="container">
         <h2>Featuring these excellent speakers</h2>
+        <div style="width:960px;height: 350px;">
+            <div  style="width:130px;float:left;margin:3rem;">
+                <img src="images/speakers/april-meyer.jpg"/>
+                <h6>April Meyer</h6>
+            </div>
+            <div style="width:130px;float:left;margin:3rem;">
+                <img src="images/speakers/david-alexander.jpg"/>
+                <h6>David Alexander</h6>
+            </div>
+            <div style="width:130px;float:left;margin:3rem;">
+                <img src="images/speakers/mark-hanson.jpg"/>
+                <h6>Mark Hanson</h6>
+            </div>
+            <div style="width:130px;float:left;margin:3rem;">
+                <img src="images/speakers/melissa-kerr.jpg"/>
+                <h6>Melissa Kerr</h6>
+            </div>
+        </div>
     </div>
-    <div class="container" style="width:960px;height: 350px;">
-        <div style="width:130px;float:left;margin:3rem;">
-            <img src="images/speakers/april-meyer.jpg"/>
-            <h6>April Meyer</h6>
-        </div>
-        <div style="width:130px;float:left;margin:3rem;">
-            <img src="images/speakers/david-alexander.jpg"/>
-            <h6>David Alexander</h6>
-        </div>
-        <div style="width:130px;float:left;margin:3rem;">
-            <img src="images/speakers/mark-hanson.jpg"/>
-            <h6>Mark Hanson</h6>
-        </div>
-        <div style="width:130px;float:left;margin:3rem;">
-            <img src="images/speakers/melissa-kerr.jpg"/>
-            <h6>Melissa Kerr</h6>
-        </div>
-    </div>
-</div>
-
-<div class="sponsor">
-    <div class="container" style="width:960px;height: 650px;">
+</section>
+<section>
+    <div class='container' style="width:960px;height: 650px;">
         <h2>Thanks to our sponsors</h2>
-        <div style="width:250px;height:200px;float:left;margin:2rem;">
-            <img src="images/sponsors/sponsor1.png"/>
+        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
+            <img />
         </div>
-        <div style="width:250px;height:200px;float:left;margin:2rem;">
-            <img src="images/sponsors/sponsor2.png"/>
+        <div  class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
+            <img />
         </div>
-        <div style="width:250px;height:200px;float:left;margin:2rem;">
-            <img src="images/sponsors/sponsor3.png"/>
+        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
+            <img />
         </div>
-        <div style="width:250px;height:200px;float:left;margin:2rem;">
-            <img src="images/sponsors/sponsor4.png"/>
+        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
+            <img />
         </div>
-        <div style="width:250px;height:200px;float:left;margin:2rem;">
-            <img src="images/sponsors/sponsor5.png"/>
+        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
+            <img />
         </div>
     </div>
-</div>
-<div class="video">
+</section>
+<section>
     <div class="container">
         <h2>Video from last year</h2>
-        <video src="http://ak.channel9.msdn.com/ch9/265b/9a76fccd-941e-4285-ad00-9ea200aa265b/MIX09KEY01_high_ch9.mp4"></video>
-        <div class="button" style="text-align: center">
-            <button class="play"><h1>&#9658;</h1></button>
-            <button class="pause"><h1>&#449;</h1></button>
+        <video id="video">
+            <source src="http://ak.channel9.msdn.com/ch9/265b/9a76fccd-941e-4285-ad00-9ea200aa265b/MIX09KEY01_high_ch9.mp4"/>
+        </video>
+        <div style="width:60rem;height:2rem;">
+            <div style="width:55rem;height:2rem;float:left">
+            <p id="start">
+
+            </p>
         </div>
+            <div style="width:5rem;height:2rem;float:left">
+            <p id="finish">
+
+            </p>
+            </div>
+        </div>
+        <div class="button" id="btn1" style="text-align: center">
+            <button id="play">&#9658;</button>
+        </div>
+
         <p></p>
     </div>
+</section>
 
-</div>
-<div class="footer">
+<footer>
     <div class="container">
         <div style="float:left;width:800px;padding-top:10px;">
-        Hosted by Contoso
-        <address style="padding-top:10px;">Conference Center</address>
-        <address>   1234 Main Street</address>
-        <address >  Seattle </address>
-         <address>   WA 98999</address>
+            Hosted by Contoso
+            <address style="padding-top:10px;">Conference Center</address>
+            <address> 1234 Main Street</address>
+            <address> Seattle</address>
+            <address> WA 98999</address>
         </div>
         <div style="float:left;padding-top:100px;">
-        © 2012 Contoso
+            © 2012 Contoso
         </div>
     </div>
-</div>
+</footer>
+<script>
+    function image(){
+        var div=document.getElementsByClassName('sponsors')
+        var img=document.createElement('img')
+        for (var i=0; i<div.length;i++){
+            document.getElementsByClassName('sponsors')[i].write('<img src>');
+        }
+    }
+    window.addEventListener("load", image, false);
+    window.onload = function () {
+        var video = document.getElementById("video")
+        var play = document.getElementById('play')
+        var speed_down = document.createElement('button')
+        var speed_upper = document.createElement('button')
+        var button = document.getElementById('btn1')
+        var fulltime
+        document.getElementById('play').onclick = function () {
+            if (video.paused) {
+                video.play()
+                play.innerHTML = " &#449;"
+                button.insertBefore(speed_down, play)
+                button.appendChild(speed_upper)
+                speed_down.id = 'down'
+                speed_upper.id = 'upper'
+                speed_down.innerHTML = " &laquo;"
+                speed_upper.innerHTML = " &raquo;"
+                video.addEventListener('timeupdate', function () {
+                    document.getElementById('start').innerText=secondsToTime(video.currentTime)
+                }, false);
+                video.addEventListener('timeupdate', function () {
+                    document.getElementById('finish').innerText=secondsToTime(video.duration - video.currentTime)
+                }, false);
+                play.id = "pause"
+            } else {
+                video.pause()
+                button.removeChild(speed_down)
+                button.removeChild(speed_upper)
+                document.getElementById('pause').innerHTML = " &#9658;"
+                document.getElementById('pause').id = 'play'
+
+            }
+        }
+        speed_upper.onclick = function () {
+            video.playbackRate += 0.1
+        }
+        speed_down.onclick = function () {
+            video.playbackRate -= 0.1
+        }
+        function secondsToTime(time) {
+            var h = Math.floor(time / (60 * 60)),
+                dm = time % (60 * 60),
+                m = Math.floor(dm / 60),
+                ds = dm % 60,
+                s = Math.ceil(ds);
+            if (s === 60) {
+                s = 0;
+                m = m + 1;
+            }
+            if (s < 10) {
+                s = '0' + s;
+            }
+            if (m === 60) {
+                m = 0;
+                h = h + 1;
+            }
+            if (m < 10) {
+                m = '0' + m;
+            }
+            if (h === 0) {
+                fulltime = m + ':' + s;
+            } else {
+                fulltime = h + ':' + m + ':' + s;
+            }
+            return fulltime;
+        }
+    }
+</script>
 </body>
 </html>

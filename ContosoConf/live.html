@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="nav">
+<nav>
     <div class="container">
         <a href="home.html"> Home </a>
         <a href="about.html"> About </a>
@@ -18,29 +18,30 @@
         <a href="feedback.html"> Feedback </a>
         <a href="register.html"> Register </a>
     </div>
-</div>
+</nav>
 
-<div class="header">
+<header>
     <div class="container" style="width:960px;">
         <div style="width:560px;">
             <h1>ContosoConf</h1>
             <h4>A two-track conference on the latest HTML5 developments</h4>
         </div>
     </div>
-</div>
+</header>
 
-<div class="ask">
+<article>
     <div class="container">
         <h3>Attending the conference right now? Get involved!</h3>
-        <div class="question">
+        <div id="questions">
             <label>Ask a question</label>
-            <input type="text" name="question" size="40"/>
-            <button type="submit"> Ask</button>
+            <input type="text" id="question" value="" size="40"/>
+            <button type="submit" id="ask"> Ask</button>
+            <button type="submit" id="clear"> Clear</button>
         </div>
     </div>
-</div>
+</article>
 
-<div class="footer">
+<footer>
     <div class="container">
         <div style="float:left;width:800px;padding-top:10px;">
             Hosted by Contoso
@@ -53,6 +54,47 @@
             © 2012 Contoso
         </div>
     </div>
-</div>
+</footer>
+<script>
+    var currentCount = localStorage.length
+    var btn = document.getElementById('ask')
+    var btn2 = document.getElementById('clear')
+    var text = document.getElementById('questions')
+    var p = document.createElement('p')
+    function helo() {
+        if (document.querySelector('#question').value != '' && currentCount < 3) {
+            var output = document.createElement('p')
+            currentCount += 1
+            window.localStorage['key' + currentCount.toString()] = document.querySelector('#question').value
+            text.appendChild(output)
+            output.innerHTML += window.localStorage['key' + currentCount.toString()]
+            document.querySelector('#question').value = ""
+        } else {
+            document.querySelector('#question').value = ""
+        }
+    }
+
+     function hello1() {
+        currentCount = localStorage.length
+        if (currentCount > 0) {
+            localStorage.removeItem('key' + currentCount.toString())
+            text.removeChild(text.lastChild);
+            currentCount -= 1
+        }
+    }
+
+    function change() {
+        var str = "";
+        for (var i = 0; i < localStorage.length; i++) {
+            str += localStorage.getItem(localStorage.key(i)) + "<br>";
+        }
+        text.appendChild(p)
+        p.innerHTML = str;
+
+    }
+    window.addEventListener("load", change, false);
+    btn.addEventListener("click", helo, false);
+    btn2.addEventListener("click", hello1, false);
+</script>
 </body>
 </html>
