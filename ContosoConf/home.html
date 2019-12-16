@@ -48,20 +48,16 @@
     <div class="container">
         <h2>Featuring these excellent speakers</h2>
         <div style="width:960px;height: 350px;">
-            <div  style="width:130px;float:left;margin:3rem;">
-                <img src="images/speakers/april-meyer.jpg"/>
+            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
                 <h6>April Meyer</h6>
             </div>
-            <div style="width:130px;float:left;margin:3rem;">
-                <img src="images/speakers/david-alexander.jpg"/>
+            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
                 <h6>David Alexander</h6>
             </div>
-            <div style="width:130px;float:left;margin:3rem;">
-                <img src="images/speakers/mark-hanson.jpg"/>
+            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
                 <h6>Mark Hanson</h6>
             </div>
-            <div style="width:130px;float:left;margin:3rem;">
-                <img src="images/speakers/melissa-kerr.jpg"/>
+            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
                 <h6>Melissa Kerr</h6>
             </div>
         </div>
@@ -70,20 +66,20 @@
 <section>
     <div class='container' style="width:960px;height: 650px;">
         <h2>Thanks to our sponsors</h2>
-        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
-            <img />
+        <div style="width:250px;height:200px;float:left;margin:2rem;">
+            <img  class="sponsors" />
         </div>
-        <div  class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
-            <img />
+        <div   style="width:250px;height:200px;float:left;margin:2rem;">
+            <img class="sponsors"/>
         </div>
-        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
-            <img />
+        <div  style="width:250px;height:200px;float:left;margin:2rem;">
+            <img class="sponsors"/>
         </div>
-        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
-            <img />
+        <div  style="width:250px;height:200px;float:left;margin:2rem;">
+            <img class="sponsors"/>
         </div>
-        <div class="sponsors" style="width:250px;height:200px;float:left;margin:2rem;">
-            <img />
+        <div  style="width:250px;height:200px;float:left;margin:2rem;">
+            <img class="sponsors"/>
         </div>
     </div>
 </section>
@@ -129,11 +125,15 @@
 </footer>
 <script>
     function image(){
-        var div=document.getElementsByClassName('sponsors')
-        var img=document.createElement('img')
-        for (var i=0; i<div.length;i++){
-            document.getElementsByClassName('sponsors')[i].write('<img src>');
+        var img=document.getElementsByClassName('sponsors')
+        for (var i=0; i<img.length;i++){
+            img[i].src="images/sponsors/sponsor"+(i+1).toString()+'.png';
         }
+    }
+    function speakers(){
+        var div= document.getElementsByClassName('speakers')
+        var path=window.location.pathname+'/speakers/'
+
     }
     window.addEventListener("load", image, false);
     window.onload = function () {

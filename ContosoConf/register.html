@@ -32,14 +32,14 @@
 
 <article>
     <div class="container">
-        <form method="post" target="_blank">
+        <form id="registr" method="post" target="_blank">
             <legend>Register for the conference</legend>
             <label>First name: </label>
             <input type="text" name="first_name" value="" size="50" required="required"/>
             <label>Last name:</label>
             <input type="text" name="last_name" value="" size="50" required="required"/>
             <label>Email address:</label>
-            <input type="email" name="mail" value="" size="50" required="required"/>
+            <input type="email" name="mail" value="" size="50" />
             <label>Choose a password:</label>
             <input type="password" name="pass" value="" size="50" required="required"/>
             <label>Confirm your password:</label>
@@ -66,5 +66,12 @@
         </div>
     </div>
 </footer>
+<script>
+    $('#registr').submit(function(){
+        alert('You was registred');
+        $('input').attr("value","");
+        return False
+    });
+</script>
 </body>
 </html>

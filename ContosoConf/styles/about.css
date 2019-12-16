@@ -1,16 +1,16 @@
-.text {
+article {
     border-top:2px solid #2700ff;
     text-align:left;
 }
 
-.text p{
+article p{
     font-size:1.5rem;
 }
 
-.text ol{
+article ol{
     font-size:1.7rem;
 }
 
-.text q{
+article q{
     font-size:2.5rem;
 }

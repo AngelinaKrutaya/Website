@@ -39,8 +39,8 @@
                 <p>How would you rate the speaker's knowledge of the topic?</p>
             </div>
             <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
-                <input type="range" min="1" max="5" style="display:none;"/>
-                <div id="start" class="star"></div>
+                <input type="range" min="0" max="5" style="display:none;"/>
+                <div  class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
@@ -52,7 +52,8 @@
                 <p>How well could you hear the speaker?</p>
             </div>
             <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
-                <input type="range" min="1" max="5" style="display:none;"/>
+                <input type="range" min="0" max="5" style="display:none;"/>
+
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
@@ -87,9 +88,11 @@
             </div>
         </div>
         <h6>Any additional comments?</h6>
-        <textarea rows="10" cols="45" name="text"></textarea>
-        </br>
-        <button type="submit">Send Feedback</button>
+        <form id="feedback">
+            <textarea id='message' rows="10" cols="45" name="text"></textarea>
+            </br>
+            <button type="submit">Send Feedback</button>
+        </form>
     </div>
 </article>
 
@@ -108,6 +111,11 @@
     </div>
 </footer>
 <script>
+    $('#feedback').submit(function(){
+        alert('Your feedback was sent');
+        $('#message').val("");
+        return False
+    });
     $(function () {
         $(".star").hover(onIn, onOut);
     });
@@ -116,45 +124,55 @@
     function onIn() {
         var index1 = $(".star").index(this);
         $(".star").each(function (index, element) {
-
-                if (index1 > 14) {
-                    if (index < 15) {
+                if (index1 >= 0 && index1 <5 && index>=0) {
+                    if (index>index1 && index<5 ) {
                         $(element).attr("id", "");
-                    } else {
+                    } else if (index<5) {
                         $(element).attr("id", "choose");
-                        $(element).click(function () { $(element).attr("class", "cho");});
+                        $(element).click(function () {
+                            $(element).attr("class", "cho");
+                        })
                     }
-                } else if (index1 > 9) {
-                    if (index < 10) {
-                        $(element).attr("id", "");
-                    } else {
-                        $(element).attr("id", "choose");
-                        $(element).click(function () { $(element).attr("class", "cho");});
-
-                    }
-                } else if (index1 > 4) {
-                    if (index < 5) {
-                        $(element).attr("id", "");
-                    } else {
-                        $(element).attr("id", "choose");
-                        $(element).click(function () { $(element).attr("class", "cho");});
-                    }
-                } else {
-                    $(element).attr("id", "choose");
-                    $(element).click(function () { $(element).attr("class", "cho");
-                    });
                 }
+                else
+                    if (index1 > 4 && index1 < 10 && index>4) {
+                        if (index>index1  && index<10) {
+                            $(element).attr("id", "");
+                        } else if (index<10){
+                            $(element).attr("id", "choose");
+                            $(element).click(function () {
+                                $(element).attr("class", "cho");
+                            });
+                        }
+                    } else if (index1 > 9 && index1 <15 && index >9) {
+                        if (index>index1 && index<15) {
+                            $(element).attr("id", "");
+                        } else if (index<15) {
+                            $(element).attr("id", "choose");
+                            $(element).click(function () {
+                                $(element).attr("class", "cho");
+                            });
+
+                        }
+                    } else if (index1 > 14 && index1<20 && index>14) {
+                        if (index>index1 && index<20) {
+                            $(element).attr("id", "");
+                        } else if (index<20){
+                            $(element).attr("id", "choose");
+                            $(element).click(function () {
+                                $(element).attr("class", "cho");
+                            });
+                        }
+                    }
+                })
                 if (index == index1) {
                     return false;
                 }
             }
-        )
-        ;
-    }
-    ;
+
     function onOut() {
         $(".cho").next().attr("id", " ");
-        $(".cho").attr("class","star");
+        $(".cho").attr("class", "star");
     };
 
 </script>
