@@ -6,6 +6,7 @@
     <link href="styles/site.css" rel="stylesheet" type="text/css"/>
     <link href="styles/feedback.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -33,52 +34,52 @@
 <article>
     <div class="container">
         <h3>Enjoyed the conference? Leave your feedback!</h3>
-        <div class="stars" style="width:960px; height:100px">
+        <div style="width:960px; height:100px">
             <div style="width:600px;float:left">
                 <p>How would you rate the speaker's knowledge of the topic?</p>
             </div>
-            <div style="width:300px; height:50px;float:left; margin:30px;">
+            <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
                 <input type="range" min="1" max="5" style="display:none;"/>
-                <div class="star" ></div>
+                <div id="start" class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
             </div>
         </div>
-        <div class="stars" style="width:960px;height:100px">
+        <div style="width:960px;height:100px">
             <div style="width:600px;float:left">
-            <p>How well could you hear the speaker?</p>
-        </div>
-            <div style="width:300px; height:50px;float:left; margin:30px;">
+                <p>How well could you hear the speaker?</p>
+            </div>
+            <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
                 <input type="range" min="1" max="5" style="display:none;"/>
-                <div class="star" ></div>
+                <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
             </div>
         </div>
-        <div class="stars" style="width:960px;height:100px">
+        <div style="width:960px;height:100px">
             <div style="width:600px;float:left">
                 <p>How useful did you find the information in this talk?</p>
             </div>
-            <div style="width:300px; height:50px;float:left; margin:30px;">
+            <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
                 <input type="range" min="1" max="5" style="display:none;"/>
-                <div class="star" ></div>
+                <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
             </div>
         </div>
-        <div class="stars" style="width:960px;height:100px" style="display:none;">
-            <div style="width:600px;float:left" >
+        <div style="width:960px;height:100px" style="display:none;">
+            <div style="width:600px;float:left">
                 <p>How would you rate the overall session?</p>
             </div>
-            <div style="width:300px; height:50px;float:left; margin:30px;">
+            <div class="stars" style="width:300px; height:50px;float:left; margin:30px;">
                 <input type="range" min="1" max="5" style="display:none;"/>
-                <div class="star" ></div>
+                <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
@@ -106,5 +107,58 @@
         </div>
     </div>
 </footer>
+<script>
+    $(function () {
+        $(".star").hover(onIn, onOut);
+    });
+
+
+    function onIn() {
+        var index1 = $(".star").index(this);
+        $(".star").each(function (index, element) {
+
+                if (index1 > 14) {
+                    if (index < 15) {
+                        $(element).attr("id", "");
+                    } else {
+                        $(element).attr("id", "choose");
+                        $(element).click(function () { $(element).attr("class", "cho");});
+                    }
+                } else if (index1 > 9) {
+                    if (index < 10) {
+                        $(element).attr("id", "");
+                    } else {
+                        $(element).attr("id", "choose");
+                        $(element).click(function () { $(element).attr("class", "cho");});
+
+                    }
+                } else if (index1 > 4) {
+                    if (index < 5) {
+                        $(element).attr("id", "");
+                    } else {
+                        $(element).attr("id", "choose");
+                        $(element).click(function () { $(element).attr("class", "cho");});
+                    }
+                } else {
+                    $(element).attr("id", "choose");
+                    $(element).click(function () { $(element).attr("class", "cho");
+                    });
+                }
+                if (index == index1) {
+                    return false;
+                }
+            }
+        )
+        ;
+    }
+    ;
+    function onOut() {
+        $(".cho").next().attr("id", " ");
+        $(".cho").attr("class","star");
+    };
+
+</script>
+<style>
+</style>
 </body>
 </html>
