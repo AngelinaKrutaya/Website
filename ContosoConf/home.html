@@ -47,18 +47,22 @@
 <section>
     <div class="container">
         <h2>Featuring these excellent speakers</h2>
-        <div style="width:960px;height: 350px;">
-            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
+        <div style="width:980px;height: 350px;">
+            <div  style="width:130px;float:left;margin:3rem;">
                 <h6>April Meyer</h6>
+                <img  class="speakers" />
             </div>
-            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
-                <h6>David Alexander</h6>
+            <div   style="width:130px;float:left;margin:2rem;">
+                <h6 style="margin:0px;">David Alexander</h6>
+                <img  class="speakers" />
             </div>
-            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
+            <div style="width:130px;float:left;margin:3rem;">
                 <h6>Mark Hanson</h6>
+                <img  class="speakers" />
             </div>
-            <div  class="speakers" style="width:130px;float:left;margin:3rem;">
+            <div   style="width:120px;float:left;margin:3rem;">
                 <h6>Melissa Kerr</h6>
+                <img  class="speakers" />
             </div>
         </div>
     </div>
@@ -131,11 +135,14 @@
         }
     }
     function speakers(){
-        var div= document.getElementsByClassName('speakers')
-        var path=window.location.pathname+'/speakers/'
+        var img=document.getElementsByClassName('speakers')
+        for (var i=0; i<img.length;i++){
+            img[i].src="images/speakers/speakers"+(i+1).toString()+'.jpg';
+        }
 
     }
     window.addEventListener("load", image, false);
+    window.addEventListener("load", speakers, false);
     window.onload = function () {
         var video = document.getElementById("video")
         var play = document.getElementById('play')
